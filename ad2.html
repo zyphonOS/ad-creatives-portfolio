@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0B1210; }
+  .ad {
+    width: 1080px; height: 1080px; position: relative; overflow: hidden;
+    background: radial-gradient(1100px 700px at 15% -10%, #12201A 0%, #0B1210 60%);
+    font-family: Georgia, 'Times New Roman', serif; color: #F2EDE0;
+    padding: 84px 80px; display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .topline {
+    font-family: system-ui, -apple-system, sans-serif; font-size: 30px; letter-spacing: 0.42em;
+    text-transform: uppercase; color: #8FBF9F; font-weight: 600;
+  }
+  .headline { font-size: 96px; line-height: 1.05; letter-spacing: -0.01em; font-weight: 700; }
+  .headline .green { color: #A9D5B4; }
+  .grid { display: flex; gap: 28px; margin-top: 20px; }
+  .card {
+    border: 2px solid #24402F; border-radius: 12px; padding: 34px 30px; width: 300px;
+    font-family: system-ui, sans-serif;
+  }
+  .card .name { font-size: 30px; color: #A9D5B4; font-weight: 700; margin-bottom: 12px; }
+  .card .role { font-size: 26px; color: #CBBFA6; line-height: 1.45; }
+  .badge {
+    display: inline-block; border: 2px solid #8FBF9F; color: #A9D5B4; border-radius: 999px;
+    font-family: system-ui, sans-serif; font-size: 26px; letter-spacing: 0.12em; padding: 18px 34px;
+    text-transform: uppercase;
+  }
+  .sub { font-family: system-ui, sans-serif; font-size: 32px; line-height: 1.5; color: #CBBFA6; font-weight: 400; }
+</style>
+</head>
+<body>
+  <div class="ad">
+    <div class="topline">What's inside</div>
+    <div class="headline">Nothing <span class="green">to decode.</span></div>
+    <div class="grid">
+      <div class="card"><div class="name">Adaptogen blend</div><div class="role">For calm energy, not a spike.</div></div>
+      <div class="card"><div class="name">Botanical base</div><div class="role">Gut-friendly, plant-sourced.</div></div>
+      <div class="card"><div class="name">Trace minerals</div><div class="role">The missing daily 1%.</div></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:32px;">
+      <div class="badge">3rd-party tested</div>
+      <div class="sub">Full label on the jar. No fine print games.</div>
+    </div>
+  </div>
+</body>
+</html>
