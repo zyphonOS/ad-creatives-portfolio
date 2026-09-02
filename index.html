@@ -3,66 +3,98 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pikkaio Creative - AI-powered ad statics + video production</title>
+<title>Pikkaio Creative — Structure for the craft</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: #0E1013; color: #F5EFE0; font-family: Georgia, serif; }
-  .wrap { max-width: 1200px; margin: 0 auto; padding: 80px 40px 100px; }
-  .kicker { font-family: system-ui, sans-serif; letter-spacing: .35em; text-transform: uppercase; color: #C9A227; font-size: 15px; font-weight: 600; }
-  h1 { font-size: 56px; line-height: 1.1; margin: 24px 0 20px; font-weight: 700; max-width: 820px; }
-  h1 .gold { color: #D4AF37; }
-  .lede { font-family: system-ui, sans-serif; font-size: 19px; line-height: 1.7; color: #CFC8B5; max-width: 720px; }
-  .proof { font-size: 16px; color: #9A927F; font-family: system-ui, sans-serif; margin-top: 14px; }
-  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 60px; }
-  .card { border: 1px solid #23262E; border-radius: 14px; overflow: hidden; background: #14161B; }
+  body { background: #F5F3F0; color: #1A1A1A; font-family: 'Inter', -apple-system, sans-serif; }
+  .wrap { max-width: 1160px; margin: 0 auto; padding: 64px 32px 80px; }
+  .top { display: flex; align-items: center; justify-content: space-between; padding-bottom: 28px; border-bottom: 1px solid #D4D4D4; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand img { height: 40px; }
+  .brand .name { font-size: 22px; font-weight: 700; letter-spacing: .01em; }
+  .brand .tag { font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: #6B6B6B; margin-top: 2px; }
+  .cta-top { background: #E8453C; color: #fff; border: 0; font-family: inherit; font-weight: 600; font-size: 14px; padding: 12px 22px; border-radius: 6px; cursor: pointer; }
+  .kicker { font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #E8453C; }
+  h1 { font-size: 42px; line-height: 1.15; font-weight: 700; margin: 14px 0 16px; max-width: 800px; }
+  h1 .red { color: #E8453C; }
+  .lede { font-size: 17px; line-height: 1.65; color: #2D2D2D; max-width: 680px; }
+  .tags { display: flex; gap: 10px; margin-top: 22px; flex-wrap: wrap; }
+  .tag { background: #fff; border: 1px solid #D4D4D4; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 500; color: #2D2D2D; }
+  .video-band { margin-top: 48px; background: #fff; border: 1px solid #D4D4D4; border-radius: 12px; box-shadow: 0 12px 24px rgba(0,0,0,.08); overflow: hidden; display: grid; grid-template-columns: 340px 1fr; }
+  .video-side { background: #E8453C; display: flex; align-items: center; justify-content: center; padding: 30px; }
+  .video-side video { max-height: 420px; border-radius: 8px; box-shadow: 0 16px 30px rgba(0,0,0,.25); }
+  .video-info { padding: 36px 34px; display: flex; flex-direction: column; justify-content: center; }
+  .video-info h2 { font-size: 26px; line-height: 1.25; font-weight: 700; margin: 12px 0 14px; }
+  .video-info p { font-size: 15px; line-height: 1.65; color: #3D3D3D; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 44px; }
+  .card { background: #fff; border: 1px solid #D4D4D4; border-radius: 10px; overflow: hidden; }
   .card img { width: 100%; display: block; }
-  .card .cap { padding: 18px 22px; font-family: system-ui, sans-serif; font-size: 15px; color: #CFC8B5; }
-  .links { margin-top: 64px; display: flex; gap: 28px; flex-wrap: wrap; font-family: system-ui, sans-serif; }
-  .links a { color: #D4AF37; text-decoration: none; font-size: 17px; border-bottom: 1px solid #3A3E48; padding-bottom: 3px; }
-  .foot { margin-top: 80px; border-top: 1px solid #23262E; padding-top: 28px; font-family: system-ui, sans-serif; color: #6A6470; font-size: 14px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .card .cap { padding: 16px 18px; font-size: 14px; font-weight: 600; color: #1A1A1A; border-top: 1px solid #F0EDEA; }
+  .card .sub { padding: 0 18px 16px; font-size: 12px; color: #6B6B6B; }
+  .cap-line { margin-top: 40px; font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #6B6B6B; }
+  .cta-row { margin-top: 36px; text-align: center; }
+  .cta-main { background: #E8453C; color: #fff; font-family: inherit; font-weight: 700; font-size: 18px; padding: 20px 40px; border: 0; border-radius: 6px; cursor: pointer; }
+  .foot { margin-top: 56px; border-top: 1px solid #D4D4D4; padding-top: 24px; font-size: 13px; color: #6B6B6B; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  a { color: #E8453C; }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="kicker">Pikkaio Creative · Application Samples</div>
-  <h1>Ad creative that stops the scroll, <span class="gold">statics and video,</span> produced by an AI team.</h1>
-  <p class="lede">Full creative production, built to the 2026 DTC performance standard: emotional hooks, customer language, specific proof. Statics and a 21-second vertical video with a real human reaction at its core, engineered for the mute-first scroll and rewarded with sound.</p>
-  <p class="proof">Benefit hook · mechanism proof · honest scarcity · a real surprise-and-joy video beat. The message types that win in health and wellness.</p>
+  <div class="top">
+    <div class="brand">
+      <img src="logo.png" alt="Pikkaio" style="background:#fff;border-radius:6px;">
+      <div>
+        <div class="name">Pikkaio</div>
+        <div class="tag">Structure for the craft</div>
+      </div>
+    </div>
+    <a href="mailto:pikkaiomedia@gmail.com" class="cta-top">Start a project</a>
+  </div>
 
-  <div class="video-band" style="margin-top:60px;border:1px solid #23262E;border-radius:14px;overflow:hidden;background:#14161B;display:grid;grid-template-columns:1fr 1.3fr;gap:0;">
-    <div style="display:flex;align-items:center;justify-content:center;padding:30px;">
-      <video controls muted playsinline preload="metadata" style="max-height:420px;border-radius:12px;box-shadow:0 20px 50px rgba(0,0,0,.5);">
+  <div class="kicker" style="margin-top:44px;">Brand · Design · Print</div>
+  <h1>We build how you're seen, <span class="red">felt,</span> and remembered.</h1>
+  <p class="lede">Pikkaio is a brand production company. This page shows a piece of that work: a kinetic vertical video ad and a set of statics, produced as one cohesive creative system. Motion, sound, story, and brand, working together to stop the scroll and hold attention.</p>
+  <div class="tags">
+    <span class="tag">Kinetic video</span>
+    <span class="tag">Brand system</span>
+    <span class="tag">Mute-safe &amp; sound-on</span>
+    <span class="tag">Single CTA</span>
+  </div>
+
+  <div class="video-band">
+    <div class="video-side">
+      <video controls muted playsinline loop preload="metadata">
         <source src="video_ad_sample.mp4" type="video/mp4">
       </video>
     </div>
-    <div style="padding:36px 34px;display:flex;flex-direction:column;justify-content:center;">
-      <div class="kicker" style="color:#D4AF37;">Video ad · 21s · vertical 9:16</div>
-      <h2 style="font-size:30px;line-height:1.2;margin:14px 0;">"This is what 'it finally works' looks like."</h2>
-      <p style="font-family:system-ui;font-size:16px;line-height:1.7;color:#CFC8B5;">
-        A real face, a genuine surprise and joy reaction, '11 days' of specific proof, one clear mechanism, and a single CTA. Built for the 3-second rule: the emotion and the message carry muted; voiceover + ambient bed reward sound-on. No stock-poser filler, no fake pain.
-      </p>
-      <div style="display:flex;gap:10px;margin-top:18px;flex-wrap:wrap;">
-        <span style="background:#14161B;border:1px solid #3A3E48;border-radius:999px;padding:8px 16px;font-family:system-ui;font-size:13px;color:#CFC8B5;">Real human emotion</span>
-        <span style="background:#14161B;border:1px solid #3A3E48;border-radius:999px;padding:8px 16px;font-family:system-ui;font-size:13px;color:#CFC8B5;">Specific proof</span>
-        <span style="background:#14161B;border:1px solid #3A3E48;border-radius:999px;padding:8px 16px;font-family:system-ui;font-size:13px;color:#CFC8B5;">One mechanism</span>
-        <span style="background:#14161B;border:1px solid #3A3E48;border-radius:999px;padding:8px 16px;font-family:system-ui;font-size:13px;color:#CFC8B5;">Single CTA</span>
+    <div class="video-info">
+      <div class="kicker">Video · 13s · vertical 9:16</div>
+      <h2>Pikkaio creative motion sample: real energy, clean brand.</h2>
+      <p>A confident subject in genuine motion, cut to a Pikkaio-branded typographic rhythm: FEEL YOUR BEST → CRAFT THAT CONVERTS → BRAND. DESIGN. PRINT. → THIS IS THE RESULT → READY FOR YOURS? with a single red CTA. Built for the 3-second rule — the motion and message carry muted; voiceover and sound reward sound-on.</p>
+      <div class="tags" style="margin-top:16px;">
+        <span class="tag">Brand. Design. Print.</span>
+        <span class="tag">Picture. People. Motion.</span>
       </div>
     </div>
   </div>
 
+  <div class="cap-line" style="margin-top:40px;">Supporting statics in the same visual system</div>
   <div class="grid">
-    <div class="card"><img src="ad1_static.png" alt="Benefit static: Feel lighter by Friday"><div class="cap">1 · Benefit hook</div></div>
-    <div class="card"><img src="ad2_static.png" alt="Mechanism static: What's inside"><div class="cap">2 · Mechanism proof</div></div>
-    <div class="card"><img src="ad3_static.png" alt="Offer static: This month's run is almost gone"><div class="cap">3 · Offer and honest scarcity</div></div>
+    <div class="card"><img src="ad1_static.png" alt="Static 1"><div class="cap">1 · Benefit hook</div><div class="sub">A single promise, one focal point.</div></div>
+    <div class="card"><img src="ad2_static.png" alt="Static 2"><div class="cap">2 · Mechanism proof</div><div class="sub">Show what is inside, plainly.</div></div>
+    <div class="card"><img src="ad3_static.png" alt="Static 3"><div class="cap">3 · Honest urgency</div><div class="sub">One batch, real scarcity.</div></div>
   </div>
-  <div class="links">
-    <a href="https://x.com/ebvkaar">X · @ebvkaar</a>
-    <a href="https://ebvka.substack.com">Writing · ebvka.substack.com</a>
-    <a href="mailto:zyphon.os.you@gmail.com">zyphon.os.you@gmail.com</a>
+
+  <div class="cta-row">
+    <a href="mailto:pikkaiomedia@gmail.com" class="cta-main">Start a project</a>
   </div>
+
   <div class="foot">
-    <span>Pikkaio Creative · a Pikkaio brand</span>
-    <span>AI-driven production · human-owned outcome</span>
+    <span>Pikkaio · Brand. Design. Print.</span>
+    <span>pikkaiomedia@gmail.com</span>
   </div>
 </div>
 </body>
